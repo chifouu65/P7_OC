@@ -1,9 +1,9 @@
-import KasaLogo from "../logoKasa/_KasaLogo";
+//import KasaLogo from "../logoKasa/_KasaLogo";
 
 function FooterComponent() {
   return (
       <footer>
-        <KasaLogo fill={'black'} height={'39'} width={'122'}/>
+          {/*<KasaLogo fill={'black'} height={'39'} width={'122'}/>*/}
       </footer>
   )
 }

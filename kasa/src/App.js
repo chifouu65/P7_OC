@@ -8,6 +8,8 @@ import NotFoundPage from "./pages/404/404";
 /* Components import */
 import FooterComponent from "./components/footer/Footer";
 import Header from "./components/header/Header";
+/* Style */
+import './global.style.css'
 
 function App() {
   return (
