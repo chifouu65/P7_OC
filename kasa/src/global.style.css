@@ -15,6 +15,8 @@ body {
     --white-color: #fff;
     --text-color-primary: #FF6060;
     --text-color-secondary: white;
+
+    --bg-home-grey: #F6F6F6;
 }
 
 a {
@@ -72,13 +74,6 @@ a {
     text-align: center;
     line-height: 30px;
 }
-.home_header h1:before {
-    content:'' ;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    position: absolute;
-}
 
 .home_header p {
     font-size: 24px;
@@ -88,7 +83,56 @@ a {
 }
 
 /* Home card */
+.home_body  {
+    border-radius: 20px;
+    margin-top: 3rem;
+    background: var(--bg-home-grey);
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.home_body .home_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    width: 100%;
+}
+.home_list_item {
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 340px;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+}
+.home_list_item h2 {
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--white-color);
+    position: absolute;
+    padding: 1rem;
+    max-width: min-content;
+    min-width: 150px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.home_list img {
+    width: 100%;
+    height: 100%;
+}
+.home_list_item_text {
+    background: rgba(0, 0, 0, 0.3);
+}
 
+.home_list_item_text  {
+    font-size: 24px;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
 @media screen and (max-width: 789px){
     a {
         font-size: 12px;
@@ -114,17 +158,24 @@ a {
     /* Home header */
     .home_header h1 {
         font-size: 24px;
-        text-align: start;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: flex-start;
+        height: 100%;
     }
 
     .home_header_title_span {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+
     }
     .home_header_title:nth-child(1) {
         padding: 0 20px;
     }
     /* Home card */
+    .home_body .home_list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .home_list_item {
+        max-width: 100%;
+    }
 }
