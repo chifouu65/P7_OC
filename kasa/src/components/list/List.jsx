@@ -1,4 +1,5 @@
 import data from '../../data.json'
+import {Link} from "react-router-dom";
 
 
 function List() {
@@ -18,7 +19,11 @@ function List() {
                                     height={340}
                                     src={item.cover}
                                     />
-                                <h2>{item.title}</h2>
+                                <Link to={`/product/id=${item.id}`}
+                                      className='custom-off'
+                                >
+                                    {item.title}
+                                </Link>
                             </div>
                         ))
                 }

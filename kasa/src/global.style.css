@@ -7,6 +7,7 @@ body {
     max-width: 1240px;
     padding: 0 20px;
     margin: auto;
+    font-size: 18px;
 }
 
 :root {
@@ -15,11 +16,10 @@ body {
     --white-color: #fff;
     --text-color-primary: #FF6060;
     --text-color-secondary: white;
-
     --bg-home-grey: #F6F6F6;
 }
 
-a {
+nav a {
     text-decoration: none;
     color: var(--text-color-primary);
     font-weight: 500;
@@ -48,6 +48,15 @@ a {
     gap: 50px;
 }
 
+
+/* class for hide line over 2 */
+.custom-off {
+    --max-line: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-break: var(--max-line);
+}
 /* HomePage */
 
 /* home header */
@@ -99,35 +108,41 @@ a {
     width: 100%;
 }
 .home_list_item {
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
     max-height: 340px;
-    max-width: 340px;
-    display: flex;
+    display: block;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: start;
-    overflow: hidden;
-}
-.home_list_item h2 {
-    position: relative;
     height: 100%;
+    margin-bottom: 40px;
+}
+.home_list_item a {
+    position: relative;
     min-height: 50px;
     max-height: 50px;
-    top: -50px;
+    top: -90px;
     border-radius: 15px;
-    max-width: 100%;
     color: white;
-    padding: 0 20px;
+    padding:20px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    font-size: 18px;
+}.home_list_item a:hover {
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
 }
 .home_list img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    max-height: 340px;
+    min-height: 340px;
 }
 .home_list_item_text {
     background: rgba(0, 0, 0, 0.3);
@@ -136,7 +151,7 @@ a {
 .home_list_item_text  {
     font-size: 24px;
     color: var(--white-color);
-    margin-bottom: 20px;
+
 }
 @media screen and (max-width: 789px){
     a {
@@ -171,20 +186,23 @@ a {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
     }
     .home_header_title:nth-child(1) {
         padding: 0 20px;
     }
     /* Home card */
     .home_body {
-        padding: 0rem;
+        padding: 0;
         background: transparent;
     }
     .home_body .home_list {
-        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
     }
     .home_list_item {
+        padding-bottom: 20px;
+        display: block;
         max-width: 100%;
+        margin-bottom: 20px;
     }
 }
