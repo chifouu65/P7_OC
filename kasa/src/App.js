@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 /* Pages import */
 import HomePage from "./pages/home/Home";
 import AboutPage from "./pages/about/About";
@@ -19,7 +19,7 @@ function App() {
             <Routes>
                 <Route index path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/product/id:" element={<Product />} />
+                <Route path={`/product/:id`} element={<Product />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
             <FooterComponent />

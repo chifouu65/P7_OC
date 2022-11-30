@@ -69,6 +69,9 @@ nav a {
     height: 223px;
     border-radius: 20px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home_header h1 {
     background: rgba(0, 0, 0, 0.3);
@@ -80,7 +83,6 @@ nav a {
     font-size: 48px;
     font-weight: 500;
     color: var(--white-color);
-    text-align: center;
     line-height: 30px;
 }
 

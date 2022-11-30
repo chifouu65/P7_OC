@@ -19,7 +19,7 @@ function List() {
                                     height={340}
                                     src={item.cover}
                                     />
-                                <Link to={`/product/id=${item.id}`}
+                                <Link to={`/product/${item.id}`}
                                       className='custom-off'
                                 >
                                     {item.title}
