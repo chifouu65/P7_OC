@@ -96,7 +96,6 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 3rem;
-    grid-row-gap: 3rem;
     width: 100%;
 }
 .home_list_item {
@@ -108,17 +107,23 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     align-items: start;
+    overflow: hidden;
 }
 .home_list_item h2 {
-    border-radius: 10px;
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--white-color);
-    position: absolute;
-    padding: 1rem;
-    max-width: min-content;
-    min-width: 150px;
+    position: relative;
+    height: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    top: -50px;
+    border-radius: 15px;
+    max-width: 100%;
+    color: white;
+    padding: 0 20px;
+    overflow: hidden;
     background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .home_list img {
     width: 100%;
@@ -172,6 +177,10 @@ a {
         padding: 0 20px;
     }
     /* Home card */
+    .home_body {
+        padding: 0rem;
+        background: transparent;
+    }
     .home_body .home_list {
         grid-template-columns: repeat(1, 1fr);
     }
