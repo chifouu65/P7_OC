@@ -4,8 +4,8 @@ body {
     background-color: var(--white-color);
     font-family: 'Montserrat', sans-serif;
     color: #333;
+    width: 90%;
     max-width: 1240px;
-    padding: 0 20px;
     margin: auto;
     font-size: 18px;
 }
@@ -59,38 +59,48 @@ nav a {
 }
 /* HomePage */
 
-/* home header */
-.home_header {
-    background-image: url("./assets/images/header_banner_home.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/* banner header */
+.home_banner_header {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 223px;
-    border-radius: 20px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}.home_banner_header::before, .about_banner_header::before {
+     border-radius: 15px;
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 223px;
+    background: var(--black-color);
+    opacity: 0.3;
+    z-index: 1;
+     max-width: 1240px;
 }
-.home_header h1 {
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
+ .about_banner_header {
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
-    font-weight: 500;
-    color: var(--white-color);
-    line-height: 30px;
+    width: 100%;
+    height: 223px;
+    overflow: hidden;
 }
 
-.home_header p {
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--white-color);
-    margin-bottom: 20px;
+.home_banner_header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home_banner_header h1 {
+    position: absolute;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    width: 90%;
 }
 
 /* Home card */
@@ -156,7 +166,7 @@ nav a {
 
 }
 @media screen and (max-width: 789px){
-    a {
+    .nav a {
         font-size: 12px;
     }
 
@@ -170,27 +180,25 @@ nav a {
     }
 
     .nav__list {
-        gap: 20px;
+        gap: 30px;
     }
 
-    .home_header {
+    .home_banner_header {
         height: 111px;
     }
-    /* HomePage */
-    /* Home header */
-    .home_header h1 {
-        font-size: 24px;
-        justify-content: flex-start;
-        height: 100%;
+    .home_banner_header::before {
+        height: 111px;
     }
-
-    .home_header_title_span {
+    .home_banner_header h1 {
+        font-size: 24px;
+        text-align: start;
+        left: 20px;
+    }
+    /* HomePage */
+    .banner_header_title_span {
+        padding: 0 20px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-    }
-    .home_header_title:nth-child(1) {
-        padding: 0 20px;
     }
     /* Home card */
     .home_body {
