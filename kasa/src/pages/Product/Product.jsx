@@ -5,6 +5,8 @@
 import data from '../../data.json'
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import './product.css'
+import {FaStar} from "react-icons/fa";
 
 function Product() {
     const params = useParams();
@@ -21,25 +23,34 @@ function Product() {
                     <div className="product" key={product.id}>
 
                         <div className="product__header">
-                            <div className="product__img">
-                                <img src={product.cover} alt={product.title}/>
+
+                            <img src={product.cover} alt={product.title}/>
+
+                            <div className="product__header__info">
+                                <div className="product__info">
+                                    <div className="left">
+                                        <h1>{product.title}</h1>
+                                        <p>{product.location}</p>
+                                    </div>
+                                    <p>{product.tags}</p>
+                                </div>
+
+                                <div className="more">
+                                    <div className="profile">
+                                        <p>{product.host.name}</p>
+                                        <img src={product.host.picture} alt={product.host.name}/>
+                                    </div>
+                                    <div className={'stars'}>
+                                        <span><FaStar/></span>
+                                        <span><FaStar/></span>
+                                        <span><FaStar/></span>
+                                        <span><FaStar/></span>
+                                        <span><FaStar/></span>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div className="product__info">
-                                <div className="left">
-                                    <h1>{product.title}</h1>
-                                    <p>{product.location}</p>
-                                </div>
-                                <div className="right">
-                                    <p>{product.host.name}</p>
-                                    <img src={product.host.picture} alt={product.host.name}/>
-                                </div>
-                            </div>
 
-                            <div className="more">
-                                <p>{product.tags}</p>
-                                <span>{product.rating}</span>
-                            </div>
                         </div>
 
                         <article className="content">
