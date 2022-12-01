@@ -1,0 +1,14 @@
+.about_content {
+    padding: 20px 0;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 789px){
+    .about_content {
+        width: 100%;
+    }
+}

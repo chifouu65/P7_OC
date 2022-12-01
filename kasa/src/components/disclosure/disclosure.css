@@ -1,0 +1,36 @@
+
+.disc_container {
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    width: 100%;
+}
+.disc_title {
+    background: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.disc_text {
+    font-size: 24px;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 30px 20px 20px 20px;
+    border-radius:0 0 10px 10px;
+}
+
+@media screen and (max-width: 789px){
+    .disc_title {
+        font-size: 13px;
+    }
+    .disc_text {
+        font-size: 12px;
+    }
+}

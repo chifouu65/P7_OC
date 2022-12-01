@@ -1,4 +1,3 @@
-import photo from '../../assets/images/header_banner_home.png'
 
 function HomeBanner({photo, children, classZ}) {
     return (
