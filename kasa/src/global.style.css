@@ -19,35 +19,6 @@ body {
     --bg-home-grey: #F6F6F6;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--text-color-primary);
-    font-weight: 500;
-    font-size: 24px;
-}
-
-.header {
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header_logo {
-    width: 211px;
-    height: 68px;
-}
-
-.nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.nav__list {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
 main {
     min-height: 100vh;
 }
@@ -62,21 +33,8 @@ main {
 }
 
 @media screen and (max-width: 789px){
-    .nav a {
-        font-size: 12px;
-    }
-
-    .header_logo {
-        width: 145px;
-        height: 47px;
-    }
-
     body {
         max-width: 90%;
-    }
-
-    .nav__list {
-        gap: 30px;
     }
 
 }

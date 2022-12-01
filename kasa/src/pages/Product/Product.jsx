@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import './product.css'
 import {FaStar} from "react-icons/fa";
+import Disclosure from "../../components/disclosure/Disclosure";
 
 function Product() {
     const params = useParams();
@@ -54,20 +55,20 @@ function Product() {
                         </div>
 
                         <article className="content">
-                            <div className="description">
-                                <h2>Description</h2>
-                                <p>{product.description}</p>
-                            </div>
-                            <div className="equipment">
-                                <h2>Equipment</h2>
-                                <ul>
-                                    {
-                                        product.equipments.map((item) => (
-                                            <li key={item}>{item}</li>
-                                        ))
-                                    }
-                                </ul>
-                            </div>
+                            <Disclosure
+                                title={'Description'}
+                                content={product.description}
+                            />
+
+                            <Disclosure
+                                title={'Equipment'}
+                                content={
+                                    product.equipments.map((item) => (
+                                        <li key={item.id}>{item}</li>
+                                    ))
+                                }
+                            />
+
                         </article>
                     </div>
                     :

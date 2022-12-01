@@ -1,6 +1,6 @@
 
 .disc_container {
-    background-color: #F6F6F6;
+    background-color: var(--bg-home-grey);
     border-radius: 10px;
     width: 100%;
 }
