@@ -16,13 +16,12 @@ function Product() {
         setProduct(product);
     })
     return (
-        <div className={'product_container'}>
+        <main className={'product_container'}>
             {
                 product ?
                     <div className="product" key={product.id}>
                         <div className="product__header">
                             <img src={product.cover} alt={product.title}/>
-
                             <ProductHeader
                                 title={product.title}
                                 location={product.location}
@@ -59,7 +58,7 @@ function Product() {
                     :
                     <h1>Product Not Found</h1>
             }
-        </div>
+        </main>
     )
 }
 

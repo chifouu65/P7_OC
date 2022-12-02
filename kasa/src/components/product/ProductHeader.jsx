@@ -17,25 +17,23 @@ function ProductHeader({...props}) {
     return (
         <div className={'header_product'}>
 
-            <div className={'product__text'}>
+            <div className={'first'}>
                 <h1>{title}</h1>
                 <p>{location}</p>
-            </div>
-
-            <div className={'product__profile'}>
-                <p>{hostName}</p>
-                <img style={{borderRadius: '50%'}} src={hostPic} alt={hostName}/>
-            </div>
-
-            <div className={'product__more'}>
                 <ul className={'product__tags'} key={key}>
                     <Tags/>
                 </ul>
+            </div>
+
+            <div className={'second'}>
+                <div className={'product__profile'}>
+                    <p>{hostName}</p>
+                    <img style={{borderRadius: '50%'}} src={hostPic} alt={hostName}/>
+                </div>
                 <ul className={'product__rating'}>
                     <Rate rating={rating}/>
                 </ul>
             </div>
-
         </div>
     )
 }

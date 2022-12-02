@@ -7,7 +7,10 @@ function Disclosure({content, title,styleText}) {
 
     return (
         <div className={'disc_container'}>
-        <button className={'disc_title'} onClick={() => setOpen(!open)}>
+        <button
+            className={'disc_title'}
+            onClick={() => setOpen(!open)}
+        >
             <span>{title}</span>
             {open ? <BsChevronUp/> : <BsChevronDown/> }
         </button>

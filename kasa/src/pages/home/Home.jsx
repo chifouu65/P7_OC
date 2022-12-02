@@ -4,13 +4,13 @@ import photo from '../../assets/images/header_banner_home.png'
 import './home.css'
 function HomePage() {
     return (
-        <div style={{paddingTop: '2rem'} }>
+        <main>
             <HomeBanner photo={photo} classZ={'home_banner_header'}>
                 Chez vous
                 <span> partout et ailleurs</span>
             </HomeBanner>
             <List/>
-        </div>
+        </main>
     );
 }
 

@@ -34,7 +34,7 @@
 }
 /* Home card */
 .home_body  {
-    border-radius: 20px;
+    border-radius: 15px;
     margin-top: 3rem;
     background: var(--bg-home-grey);
     display: flex;
@@ -49,7 +49,6 @@
     width: 100%;
 }
 .home_list_item {
-    border-radius: 15px;
     overflow: hidden;
     max-height: 340px;
     display: block;
@@ -57,25 +56,20 @@
     align-items: start;
     height: 100%;
     margin-bottom: 40px;
+    border-radius: 15px;
 }
 .home_list_item a {
     position: relative;
-    min-height: 50px;
-    max-height: 50px;
-    top: -90px;
-    border-radius: 15px;
+    top: -55px;
     color: white;
-    padding:20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.3);
     font-weight: 500;
     font-size: 18px;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.3);
 }.home_list_item a:hover {
-     transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
      background: rgba(0, 0, 0, 0.5);
  }
 .home_list img {
@@ -84,6 +78,7 @@
     object-fit: cover;
     max-height: 340px;
     min-height: 340px;
+    z-index: 1;
 }
 .home_list_item_text {
     background: rgba(0, 0, 0, 0.3);

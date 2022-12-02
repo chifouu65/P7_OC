@@ -7,15 +7,15 @@ const Rate = ({rating}) => {
         let stars = [];
        for (let i = 1; i <= 5; i++) {
             if (i <= rate) {
-                stars.push(<FaStar color={'yellow'} key={i}/>)
+                stars.push(<FaStar className={'star'} key={i}/>)
             } else {
-                stars.push(<FaStar key={i} color={'grey'}/>)
+                stars.push(<FaStar className={'star-x'} key={i}/>)
             }
         }
         return stars;
     }
     return (
-        <div className={'star'}>
+        <div className={'stars'}>
             {
                 Rating()
             }

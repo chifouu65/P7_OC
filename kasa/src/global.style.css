@@ -19,20 +19,19 @@ body {
     --bg-home-grey: #F6F6F6;
 }
 main {
-    min-height: 100vh;
+    min-height: 80vh;
+    padding-top: 2rem;
 }
 /* class for hide line over 2 */
 .custom-off {
-    --max-line: 2;
-    display: -webkit-box;
     overflow: hidden;
+    line-height: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-clamp: 1;
     -webkit-box-orient: vertical;
-    -webkit-line-break: var(--max-line);
 }
 
 @media screen and (max-width: 789px){
-    body {
-        max-width: 90%;
-    }
 
 }

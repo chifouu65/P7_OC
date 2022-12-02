@@ -10,15 +10,11 @@ function List() {
                             <div className="home_list_item" key={item.id}>
                                 <img
                                 alt={item.title}
-                                    style={{
-                                        borderRadius: '15px',
-                                    }}
-                                    width={340}
-                                    height={340}
-                                    src={item.cover}
-                                    />
-                                <Link to={`/product/${item.id}`}
-                                      className='custom-off'
+                                style={{borderRadius: '15px',}} width={340} height={340}
+                                src={item.cover}/>
+                                <Link
+                                    className='custom-off'
+                                    to={`/product/${item.id}`}
                                 >
                                     {item.title}
                                 </Link>
