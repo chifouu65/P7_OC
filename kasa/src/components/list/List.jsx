@@ -1,7 +1,5 @@
 import data from '../../data.json'
 import {Link} from "react-router-dom";
-
-
 function List() {
     return (
         <div className={'home_body'}>

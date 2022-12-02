@@ -2,7 +2,7 @@ import {useState} from "react";
 import './disclosure.css';
 import {BsChevronDown, BsChevronUp} from "react-icons/bs";
 
-function Disclosure({content, title}) {
+function Disclosure({content, title,styleText}) {
     const [open, setOpen] = useState(false);
 
     return (
@@ -11,7 +11,7 @@ function Disclosure({content, title}) {
             <span>{title}</span>
             {open ? <BsChevronUp/> : <BsChevronDown/> }
         </button>
-        {open && <div className={'disc_text'}>{content}</div>}
+        {open && <div style={styleText} className={'disc_text'}>{content}</div>}
         </div>
     );
 

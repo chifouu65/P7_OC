@@ -18,11 +18,9 @@ body {
     --text-color-secondary: white;
     --bg-home-grey: #F6F6F6;
 }
-
 main {
     min-height: 100vh;
 }
-
 /* class for hide line over 2 */
 .custom-off {
     --max-line: 2;
