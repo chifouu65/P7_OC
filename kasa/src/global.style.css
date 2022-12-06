@@ -18,14 +18,16 @@ body {
     --text-color-secondary: white;
     --bg-home-grey: #F6F6F6;
 }
+
 main {
     min-height: 80vh;
     padding-top: 2rem;
 }
+
 /* class for hide line over 2 */
 .custom-off {
     overflow: hidden;
-    line-height: 2rem;
+    line-height: 1rem;
     display: -webkit-box;
     -webkit-line-clamp: 1; /* number of lines to show */
     line-clamp: 1;

@@ -4,9 +4,12 @@
 
 .product__disc {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     padding: 20px 0;
+}
+.product__disc span {
+    width: 100%;
 }
 
 .product__header {
@@ -17,6 +20,7 @@
 .product__header img {
     width: 100%;
     border-radius: 10px;
+    max-height: 415px;
 }
 
 .header_product {
@@ -129,4 +133,8 @@
     .product__tags li {
         min-width: 84px;
     }
+    .product__disc {
+        flex-direction: column;
+    }
+
 }

@@ -34,6 +34,7 @@ function ProductHeader({...props}) {
                     <Rate rating={rating}/>
                 </ul>
             </div>
+
         </div>
     )
 }

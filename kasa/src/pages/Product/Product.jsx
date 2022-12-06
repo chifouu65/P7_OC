@@ -34,24 +34,28 @@ function Product() {
 
                         </div>
                         <div className="product__disc">
-                            <Disclosure
-                                title={'Description'}
-                                content={product.description}
-                            />
-                            <Disclosure
-                                title={'Equipment'}
-                                styleText={
-                                    {
-                                        display: 'flex',
-                                        flexDirection: 'column',
+                            <span>
+                                <Disclosure
+                                    title={'Description'}
+                                    content={product.description}
+                                />
+                            </span>
+                            <span>
+                                <Disclosure
+                                    title={'Equipment'}
+                                    styleText={
+                                        {
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                        }
                                     }
-                                }
-                                content={
-                                    product.equipments.map((item) => (
-                                        <li key={item.id}>{item}</li>
-                                    ))
-                                }
-                            />
+                                    content={
+                                        product.equipments.map((item) => (
+                                            <li key={item.id}>{item}</li>
+                                        ))
+                                    }
+                                />
+                            </span>
                         </div>
                     </div>
 

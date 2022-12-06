@@ -7,18 +7,20 @@ function List() {
                 {
                     data.map((item) =>
                         (
-                            <div className="home_list_item" key={item.id}>
+                            <Link
+                                key={item.id}
+                                to={`/product/${item.id}`}
+                                className="home_list_item">
                                 <img
                                 alt={item.title}
                                 style={{borderRadius: '15px',}} width={340} height={340}
                                 src={item.cover}/>
-                                <Link
-                                    className='custom-off'
-                                    to={`/product/${item.id}`}
-                                >
+                                <h4 className='custom-off'>
                                     {item.title}
-                                </Link>
-                            </div>
+                                </h4>
+
+
+                            </Link>
                         ))
                 }
             </div>
