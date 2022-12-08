@@ -16,9 +16,9 @@ function App() {
         <Router>
             <Header />
             <Routes>
-                <Route index path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path={`/product/:id`} element={<Product />} />
+                <Route index path="/" element={<HomePage/>} />
+                <Route path="/about" element={<AboutPage/>} />
+                <Route path={`/product/:id`} element={<Product/>} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
             <FooterComponent />

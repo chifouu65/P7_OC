@@ -58,7 +58,6 @@ function Product() {
                             </span>
                         </div>
                     </div>
-
                     :
                     <h1>Product Not Found</h1>
             }
