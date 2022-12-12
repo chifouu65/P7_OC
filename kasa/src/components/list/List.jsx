@@ -1,11 +1,15 @@
 import data from '../../data.json'
 import {Link} from "react-router-dom";
+import {useState} from "react";
+
 function List() {
+    const [products] = useState(data);
+
     return (
         <div className={'home_body'}>
             <div className="home_list">
                 {
-                    data.map((item) =>
+                    products.map((item) =>
                         (
                             <Link
                                 key={item.id}
@@ -18,8 +22,6 @@ function List() {
                                 <h4 className='custom-off'>
                                     {item.title}
                                 </h4>
-
-
                             </Link>
                         ))
                 }

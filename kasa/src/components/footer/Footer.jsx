@@ -1,6 +1,6 @@
 import KasaLogo from "../logoKasa/_KasaLogo";
 
-function FooterComponent() {
+function Footer() {
     return (
         <footer style={{
             position: 'absolute',
@@ -23,4 +23,4 @@ function FooterComponent() {
     )
 }
 
-export default FooterComponent;
+export default Footer;

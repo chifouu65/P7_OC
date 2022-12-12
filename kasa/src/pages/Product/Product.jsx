@@ -7,40 +7,57 @@ import {useParams} from "react-router-dom";
 import './product.css'
 import Disclosure from "../../components/disclosure/Disclosure";
 import ProductHeader from "../../components/product/ProductHeader";
+import NotFoundPage from "../404/404";
+
 
 function Product() {
     const params = useParams();
     const [product, setProduct] = useState(null);
     useEffect(() => {
-        const product = data.find(item => item.id === params.id);
-        setProduct(product);
-    })
+        let selectedProduct = data.find((item) => item.id === params.id);
+        setProduct(selectedProduct);
+    }, [params.id]);
+
+    const Equipment = () => {
+        return (
+            <>
+                {
+                    product.equipments.map((item) => (
+                        <li key={item.length}>{item}</li>
+                    ))
+                }
+            </>
+        )
+    }
+
     return (
-        <main className={'product_container'}>
+
+        <>
             {
                 product ?
-                    <div className="product" key={product.id}>
-                        <div className="product__header">
-                            <img src={product.cover} alt={product.title}/>
-                            <ProductHeader
-                                title={product.title}
-                                location={product.location}
-                                tags={product.tags}
-                                hostName={product.host.name}
-                                hostPic={product.host.picture}
-                                rating={product.rating}
-                                key={product.id}
-                            />
+                    <main className={'product_container'} key={product.id}>
+                        <div className="product">
+                            <div className="product__header">
+                                <img src={product.cover} alt={product.title}/>
+                                <ProductHeader
+                                    title={product.title}
+                                    location={product.location}
+                                    tags={product.tags}
+                                    hostName={product.host.name}
+                                    hostPic={product.host.picture}
+                                    rating={product.rating}
+                                    key={product.id}
+                                />
 
-                        </div>
-                        <div className="product__disc">
+                            </div>
+                            <div className="product__disc">
                             <span>
                                 <Disclosure
                                     title={'Description'}
                                     content={product.description}
                                 />
                             </span>
-                            <span>
+                                <span>
                                 <Disclosure
                                     title={'Equipment'}
                                     styleText={
@@ -50,18 +67,17 @@ function Product() {
                                         }
                                     }
                                     content={
-                                        product.equipments.map((item) => (
-                                            <li key={item.id}>{item}</li>
-                                        ))
+                                        <Equipment/>
                                     }
                                 />
                             </span>
+                            </div>
                         </div>
-                    </div>
+                    </main>
                     :
-                    <h1>Product Not Found</h1>
+                    <NotFoundPage/>
             }
-        </main>
+        </>
     )
 }
 

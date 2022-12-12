@@ -1,7 +1,7 @@
 import {FaStar} from "react-icons/fa";
 import {useState} from "react";
 
-const Rate = ({rating}) => {
+const Rate = ({rating, key}) => {
     const [rate] = useState(rating);
     const Rating = () => {
         let stars = [];
@@ -15,7 +15,7 @@ const Rate = ({rating}) => {
         return stars;
     }
     return (
-        <div className={'stars'}>
+        <div key={key} className={'stars'}>
             {
                 Rating()
             }
