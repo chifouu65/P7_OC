@@ -6,7 +6,6 @@ function ProductHeader({...props}) {
     const {title, location, tags, hostName, hostPic, rating} = props;
     return (
         <div className={'header_product'}>
-
             <div className={'first'}>
                 <h1>{title}</h1>
                 <p>{location}</p>

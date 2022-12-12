@@ -9,7 +9,6 @@ import Disclosure from "../../components/disclosure/Disclosure";
 import ProductHeader from "../../components/product/ProductHeader";
 import NotFoundPage from "../404/404";
 
-
 function Product() {
     const params = useParams();
     const [product, setProduct] = useState(null);
@@ -17,21 +16,7 @@ function Product() {
         let selectedProduct = data.find((item) => item.id === params.id);
         setProduct(selectedProduct);
     }, [params.id]);
-
-    const Equipment = () => {
-        return (
-            <>
-                {
-                    product.equipments.map((item) => (
-                        <li key={item.length}>{item}</li>
-                    ))
-                }
-            </>
-        )
-    }
-
     return (
-
         <>
             {
                 product ?
@@ -67,7 +52,13 @@ function Product() {
                                         }
                                     }
                                     content={
-                                        <Equipment/>
+                                    <div>
+                                        {
+                                            product.equipments.map((item) => (
+                                                <li key={""}>{item}</li>
+                                            ))
+                                        }
+                                    </div>
                                     }
                                 />
                             </span>
