@@ -3,7 +3,7 @@ import './disclosure.css';
 import {BsChevronDown, BsChevronUp} from "react-icons/bs";
 
 function Disclosure({content, title,styleText}) {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(true);
 
     return (
         <div className={'disc_container'}>
