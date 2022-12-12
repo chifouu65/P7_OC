@@ -55,7 +55,7 @@ function Product() {
                                     <div>
                                         {
                                             product.equipments.map((item) => (
-                                                <li key={""}>{item}</li>
+                                                <li key={item.length}>{item}</li>
                                             ))
                                         }
                                     </div>
