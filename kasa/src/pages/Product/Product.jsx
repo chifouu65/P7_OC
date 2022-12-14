@@ -12,15 +12,18 @@ import NotFoundPage from "../404/404";
 function Product() {
     const params = useParams();
     const [product, setProduct] = useState(null);
+
+    // Get product data from data.json by id from params (url) and set it to product state
     useEffect(() => {
         let selectedProduct = data.find((item) => item.id === params.id);
         setProduct(selectedProduct);
     }, [params.id]);
+
     return (
         <>
             {
                 product ?
-                    <main className={'product_container'} key={product.id}>
+                     <main className={'product_container'} key={product.id}>
                         <div className="product">
                             <div className="product__header">
                                 <img src={product.cover} alt={product.title}/>
@@ -28,9 +31,9 @@ function Product() {
                                     title={product.title}
                                     location={product.location}
                                     tags={product.tags}
+                                    rating={product.rating}
                                     hostName={product.host.name}
                                     hostPic={product.host.picture}
-                                    rating={product.rating}
                                     key={product.id}
                                 />
 

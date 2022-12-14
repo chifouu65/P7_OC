@@ -50,6 +50,7 @@
     width: 100%;
 }
 .home_list_item {
+    overflow: hidden;
     max-height: 340px;
     display: block;
     flex-direction: column;

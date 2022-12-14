@@ -7,7 +7,7 @@ function HomeBanner({photo, children, classZ}) {
                     {children}
                 </span>
             </h1>
-            <img src={photo} alt={'alt'}/>
+            <img src={photo} alt={children}/>
         </div>
     )
 }

@@ -6,37 +6,33 @@ import './about.css'
 function AboutPage() {
     return (
         <main>
-        <HomeBanner photo={photo} classZ={'about_banner_header'}/>
-        <section className="about_content">
-            <Disclosure
-                title={'Fiabilité'}
-                content={`
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la
-                mise en page avant impression. Le Lorem Ipsum est le faux texte standard de 
-                l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                `}/>
-            <Disclosure
-                title={'Respect'}
-                content={`
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la 
-                mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie 
-                depuis les années 1500, quand un imprimeur anonyme assembla ensemble
-                `}/>
-            <Disclosure
-                title={'Service'}
-                content={`
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en 
-                page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les 
-                années 1500, quand un imprimeur anonyme assembla ensemble
-                `}/>
-            <Disclosure
-                title={'Responsabilité'}
-                content={`
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en 
-                page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis 
-                les années 1500, quand un imprimeur anonyme assembla ensemble
-                `}/>
-        </section>
+            <HomeBanner photo={photo} classZ={'about_banner_header'}/>
+            <section className="about_content">
+                <Disclosure
+                    title={'Fiabilité'}
+                    content={`
+                    Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.
+                         `}
+                />
+                <Disclosure
+                    title={'Respect'}
+                    content={`
+                La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
+                    `}
+                />
+                <Disclosure
+                    title={'Service'}
+                    content={`
+                    Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.
+                    `}
+                />
+                <Disclosure
+                    title={'Responsabilité'}
+                    content={`
+                    La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
+                    `}
+                />
+            </section>
         </main>
     );
 }
