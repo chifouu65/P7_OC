@@ -8,6 +8,7 @@ import './product.css'
 import Disclosure from "../../components/disclosure/Disclosure";
 import ProductHeader from "../../components/product/ProductHeader";
 import NotFoundPage from "../404/404";
+import Slider from "../../components/slider/Slider";
 
 function Product() {
     const params = useParams();
@@ -23,10 +24,10 @@ function Product() {
         <>
             {
                 product ?
-                     <main className={'product_container'} key={product.id}>
+                    <main className={'product_container'} key={product.id}>
                         <div className="product">
                             <div className="product__header">
-                                <img src={product.cover} alt={product.title}/>
+                                <Slider slider={product.pictures}/>
                                 <ProductHeader
                                     title={product.title}
                                     location={product.location}
@@ -36,34 +37,31 @@ function Product() {
                                     hostPic={product.host.picture}
                                     key={product.id}
                                 />
-
                             </div>
+
                             <div className="product__disc">
-                            <span>
-                                <Disclosure
-                                    title={'Description'}
-                                    content={product.description}
-                                />
-                            </span>
                                 <span>
-                                <Disclosure
-                                    title={'Equipment'}
-                                    styleText={
-                                        {
-                                            display: 'flex',
-                                            flexDirection: 'column',
+                                    <Disclosure
+                                        title={'Description'}
+                                        content={
+                                            product.description
                                         }
-                                    }
-                                    content={
-                                    <div>
-                                        {
-                                            product.equipments.map((item) => (
-                                                <li key={item.length}>{item}</li>
-                                            ))
+                                    />
+                                </span>
+                                <span>
+                                    <Disclosure
+                                        title={'Equipment'}
+                                        styleText={{display: 'flex', flexDirection: 'column',}}
+                                        content={
+                                            <div>
+                                                {
+                                                    product.equipments.map((item) => (
+                                                        <li key={item.length}>{item}</li>
+                                                    ))
+                                                }
+                                            </div>
                                         }
-                                    </div>
-                                    }
-                                />
+                                    />
                             </span>
                             </div>
                         </div>

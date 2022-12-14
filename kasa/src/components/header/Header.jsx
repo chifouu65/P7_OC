@@ -4,7 +4,10 @@ import KasaLogo from "../logoKasa/_KasaLogo";
 function HeaderComponent() {
     return (
         <header className={'header'}>
-            <KasaLogo classNamed={'header_logo'} fill={'var(--primary-color)'} />
+            <KasaLogo
+                classNamed={'header_logo'}
+                fill={'var(--primary-color)'}
+            />
             <NavigationBar />
         </header>
     )

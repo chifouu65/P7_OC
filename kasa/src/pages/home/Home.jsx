@@ -6,7 +6,10 @@ import './home.css'
 function HomePage() {
     return (
         <main>
-            <HomeBanner photo={photo} classZ={'home_banner_header'}>
+            <HomeBanner
+                photo={photo}
+                classZ={'home_banner_header'}
+            >
                 Chez vous
                 <span> partout et ailleurs</span>
             </HomeBanner>
